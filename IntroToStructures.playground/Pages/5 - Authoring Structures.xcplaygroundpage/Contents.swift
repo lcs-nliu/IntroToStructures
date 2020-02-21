@@ -66,7 +66,6 @@ struct Parallelogram {
         return "The perimeter of the parallelogram is " + String(format: "%.1f", perimeter) + " square units."
         
     
-        
     }
     
 }
@@ -90,7 +89,60 @@ print(someParallelogram.areaDescription)
 print(someParallelogram.perimeterDescription)
 
 
+// Define a sphere
 
+struct Sphere {
+    
+    // MARK: Properties
+    var radius: Double
+
+    // Computed property to return a description of the shape
+    var shapeDescription: String {
+        return "A sphere is a geometrical figure that is perfectly round, 3-dimensional and circular - like a ball. Geometrically, a sphere is defined as the set of all points equidistant from a single point in space."
+    }
+    
+    // Computed property to return the raw area
+    var surfaceArea: Double {
+        return 4 * Double.pi * pow(radius,2)
+    }
+    
+    
+    // Computed property to return the perimeter
+    var volume: Double {
+        return 4/3 * Double.pi * pow(radius,3)
+    }
+    
+    // Computed property to return a description of the area
+    var surfaceAreaDescription: String {
+        return "The surface area of the sphere is " + String(format: "%.1f", surfaceArea) + " square units."
+    }
+    
+    // Computed property to return a description of the perimeter
+    var volumeDescription: String {
+        return "The volume of the sphere is " + String(format: "%.1f", volume) + " square units."
+        
+    
+    }
+    
+}
+
+// Create a parallelogram instance
+var someSphere = Sphere(radius:5)
+
+// What is the description?
+print(someSphere.shapeDescription)
+
+// What is the area?
+someSphere.surfaceArea
+
+// What is the perimeter?
+someSphere.volume
+
+// Report on the area?
+print(someSphere.surfaceAreaDescription)
+
+// Report on the perimeter?
+print(someSphere.volumeDescription)
 /*:
  [Previous: Area Example - Rectangle](@previous) | Page 4
  */
