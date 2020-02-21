@@ -66,6 +66,7 @@ struct Parallelogram {
         return "The perimeter of the parallelogram is " + String(format: "%.1f", perimeter) + " square units."
         
     
+        
     }
     
 }
